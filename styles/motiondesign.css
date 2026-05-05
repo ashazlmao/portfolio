@@ -1,0 +1,17 @@
+/*section*/
+section {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    will-change: transform, filter, opacity;
+    transform-origin: center top;
+}
+
+@media (max-width: 768px) {
+    section {
+        position: relative;   /* disable sticky */
+        height: auto;         /* let content expand */
+        min-height: 100vh;    /* still keep full screen feel */
+    }
+}

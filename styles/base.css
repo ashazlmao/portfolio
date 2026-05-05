@@ -1,0 +1,89 @@
+/*Font imports*/
+@font-face{
+    font-family: 'bebasneue';
+    src: url(../fonts/BebasNeue_Complete/BebasNeue_Complete/Fonts/WEB/fonts/BebasNeue-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'nunito';
+    src: url(../fonts/Nunito_Complete/Nunito_Complete/Fonts/WEB/fonts/Nunito-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root{
+    --bg1: #f2f2f2;
+    --bg2: #000000;
+    --text1a: #000000;
+    --text1b: #2a2a2a;
+    --text2a: #f2f2f2;
+    --text2b: #a0a0a0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1{font-family: 'bebasneue'; font-weight: 700; font-size: 96px; line-height: 1;}
+h2{font-family: 'bebasneue'; font-weight: 500; font-size: 48px;}
+h3{font-family: 'bebasneue'; font-weight: 500; font-size: 32px;}
+p{font-family: 'nunito'; font-weight: 400; font-size: 16px;}
+a{font-family: 'bebasneue'; font-weight: 500; font-size: 16px; letter-spacing: 2px;}
+
+@media (max-width: 728px) {
+    h1{font-size: 72px;}
+    h2{font-size: 40px;}
+    h3{font-size: 28px;}
+    p{font-size: 15px;}
+    a{font-size: 15px;}
+}
+
+@media (max-width: 480px) {
+    h1{font-size: 44px;}
+    h2{font-size: 28px;}
+    h3{font-size: 22px;}
+    p{font-size: 15px;}
+    a{font-size: 14px;}
+}
+
+@media (max-width: 768px) {
+    section{
+        padding: 40px 10px;
+    }
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+section{
+    padding: 10px 40px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
