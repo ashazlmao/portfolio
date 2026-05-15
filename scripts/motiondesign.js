@@ -113,10 +113,8 @@ function updateSections() {
       const prev = sections[index - 1];
 
       const scale = 1 - progress * 0.08;
-      const opacity = 1 - progress * 0.2;
 
       prev.style.transform = `scale(${scale})`;
-      prev.style.opacity = opacity;
     }
   });
 }
