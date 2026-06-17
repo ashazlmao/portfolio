@@ -40,33 +40,6 @@ function animate() {
     ctx.fillStyle = "black";
     ctx.fill();
   });
-
-  // connect nearby dots
-  const MAX_DISTANCE = 120;
-
-  for (let i = 0; i < dots.length; i++) {
-    let connections = 0;
-
-    for (let j = i + 1; j < dots.length; j++) {
-      const dx = dots[i].x - dots[j].x;
-      const dy = dots[i].y - dots[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < MAX_DISTANCE && connections < 3) {
-        const opacity = 1 - distance / MAX_DISTANCE;
-
-        ctx.beginPath();
-        ctx.moveTo(dots[i].x, dots[i].y);
-        ctx.lineTo(dots[j].x, dots[j].y);
-        ctx.strokeStyle = `rgba(0, 0, 0, ${opacity * 0.2})`;
-        ctx.lineWidth = 1;
-        ctx.stroke();
-
-        connections++;
-      }
-    }
-  }
-
   requestAnimationFrame(animate);
 }
 
